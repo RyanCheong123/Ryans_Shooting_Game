@@ -65,13 +65,17 @@
   <ItemGroup>
     <Compile Include="Assets\AsteroidScript.cs" />
     <Compile Include="Assets\BgScript.cs" />
+    <Compile Include="Assets\Blue Cartoon UI\Demo_Assets\scripts\GUI_Demo.cs" />
     <Compile Include="Assets\DestroyScript.cs" />
     <Compile Include="Assets\EnemyScript.cs" />
     <Compile Include="Assets\EnemyShotScript.cs" />
     <Compile Include="Assets\GameManager.cs" />
+    <Compile Include="Assets\MenuManager.cs" />
     <Compile Include="Assets\PlayerScript.cs" />
     <Compile Include="Assets\ShotScript.cs" />
     <Compile Include="Assets\StarBgScript.cs" />
+    <Compile Include="Assets\mainMenuBGScript.cs" />
+    <Compile Include="Assets\mainStarBgScript.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

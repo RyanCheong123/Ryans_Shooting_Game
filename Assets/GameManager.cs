@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject pausePanel;
     public Text scoreText;
     public GameObject ast;
     public static GameManager instance;
@@ -29,7 +31,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        print(score);
         time += Time.deltaTime;
         if(time < 15)
         {
@@ -102,5 +103,24 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(enemies[1], new Vector3(9 + i/2, Random.Range(-4.0f, 4.0f), 0), Quaternion.identity);
         }
+    }
+
+    public void PauseAction()
+    {
+        Time.timeScale = 0;
+        pausePanel.SetActive(true);
+    }
+
+    public void ResumeAction()
+    {
+        Time.timeScale = 1;
+        pausePanel.SetActive(false);
+    }
+
+    public void MainMenuAction()
+    {
+        Time.timeScale = 1;
+        pausePanel.SetActive(false);
+        SceneManager.LoadScene("MainMenuScene");
     }
 }
